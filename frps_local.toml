@@ -1,0 +1,5 @@
+bindPort = 7500
+auth.method = "token"
+auth.token = "test123"
+log.to = "console"
+log.level = "info"

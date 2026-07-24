@@ -13,5 +13,5 @@ COPY frps.toml /etc/frp/frps.toml
 
 EXPOSE 7000
 
-# 启动前打印配置内容以便在 Railway 日志中验证
-CMD ["sh", "-c", "echo '=== FRPS CONFIG ===' && cat /etc/frp/frps.toml && echo '=== STARTING FRPS ===' && frps -c /etc/frp/frps.toml"]
+# 启动 frps，如果退出则 sleep 保持容器存活以便查看日志
+CMD ["sh", "-c", "echo '=== FRPS CONFIG ===' && cat /etc/frp/frps.toml && echo '=== STARTING FRPS ===' && frps -c /etc/frp/frps.toml; echo FRPS_EXITED_CODE=$? && sleep 3600"]
