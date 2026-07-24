@@ -1,5 +1,5 @@
-serverAddr = "hayabusa.proxy.rlwy.net"
-serverPort = 26126
+serverAddr = "altaria.proxy.rlwy.net"
+serverPort = 31672
 
 auth.method = "token"
 auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"

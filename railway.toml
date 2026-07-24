@@ -1,4 +1,0 @@
-[service]
-ports = [
-  { port = 7000, protocol = "tcp" },    # frp 控制 + HTTP 虚拟主机 + TCP 隧道
-]

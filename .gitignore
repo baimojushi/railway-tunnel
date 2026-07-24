@@ -1,12 +1,14 @@
-# frp 运行时
-frp_*/
-frp_*.zip
-frp_*.tar.gz
-
-# 临时文件
+# 二进制/临时文件
+cloudflared.exe
+cloudflared-linux
+*.exe
+*.zip
+*.tar.gz
 *.log
 *.txt
-frpc.exe
-frpc_go.exe
-start-frpc.bat
-frpc_config.toml
+
+# 测试文件
+test_*.sh
+retry_*.sh
+*_local*.toml
+add_portproxy.vbs
