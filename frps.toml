@@ -1,4 +1,8 @@
 bindPort = 7000
+
+auth.method = "token"
+auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
+
 log.to = "console"
 log.level = "info"
 log.maxDays = 3
