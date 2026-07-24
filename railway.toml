@@ -1,4 +1,6 @@
 [service]
 ports = [
-  { port = 7000, protocol = "tcp" },
+  { port = 7000, protocol = "tcp" },    # frp 控制通道
+  { port = 13389, protocol = "tcp" },   # RDP 隧道
+  { port = 13000, protocol = "tcp" },   # Web 隧道
 ]
