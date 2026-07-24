@@ -1,8 +1,5 @@
 bindPort = 7000
 
-# HTTP 虚拟主机 — 与 bindPort 同一个端口，根据 Host 头路由
-vhostHTTPPort = 7000
-
 auth.method = "token"
 auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
 

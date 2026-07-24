@@ -1,0 +1,24 @@
+serverAddr = "hayabusa.proxy.rlwy.net"
+serverPort = 26126
+
+auth.method = "token"
+auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
+
+log.to = "console"
+log.level = "info"
+
+[[proxies]]
+name = "web"
+type = "tcpmux"
+multiplexer = "httpconnect"
+localIP = "172.29.80.1"
+localPort = 3000
+customDomains = ["web-tunnel"]
+
+[[proxies]]
+name = "rdp"
+type = "tcpmux"
+multiplexer = "httpconnect"
+localIP = "172.29.80.1"
+localPort = 3389
+customDomains = ["rdp-tunnel"]
