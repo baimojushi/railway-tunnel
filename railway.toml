@@ -1,0 +1,4 @@
+[service]
+ports = [
+  { port = 7000, protocol = "tcp" },
+]

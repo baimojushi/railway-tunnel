@@ -1,0 +1,13 @@
+bindPort = 7000
+# kcpBindPort = 7000           # 可选: KCP 加速 (UDP)
+
+auth.method = "token"
+auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
+
+# webServer.port = 7500        # 仪表盘 (Railway 上不建议暴露，可在本地需要时启用)
+# webServer.user = "admin"
+# webServer.password = "CHANGE_ME"
+
+log.to = "console"
+log.level = "info"
+log.maxDays = 3
