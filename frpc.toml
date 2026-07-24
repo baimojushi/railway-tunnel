@@ -7,16 +7,21 @@ auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
 log.to = "console"
 log.level = "info"
 
-[[proxies]]
-name = "rdp"
-type = "tcp"
-localIP = "127.0.0.1"
-localPort = 3389
-remotePort = 13389
-
+# ---- Web 服务 (localhost:3000) ----
+# 外部访问: curl -H "Host: web-tunnel" http://hayabusa.proxy.rlwy.net:26126
 [[proxies]]
 name = "web"
-type = "tcp"
+type = "http"
 localIP = "127.0.0.1"
 localPort = 3000
-remotePort = 13000
+customDomains = ["web-tunnel"]
+
+# ---- RDP 服务 (localhost:3389) ----
+# 通过 HTTP CONNECT 隧道复用同一端口
+[[proxies]]
+name = "rdp"
+type = "tcpmux"
+multiplexer = "httpconnect"
+localIP = "127.0.0.1"
+localPort = 3389
+customDomains = ["rdp-tunnel"]

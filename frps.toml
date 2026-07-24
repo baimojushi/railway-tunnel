@@ -1,18 +1,10 @@
 bindPort = 7000
-# kcpBindPort = 7000           # 可选: KCP 加速 (UDP)
+
+# HTTP 虚拟主机 — 与 bindPort 同一个端口，根据 Host 头路由
+vhostHTTPPort = 7000
 
 auth.method = "token"
 auth.token = "CHANGE_ME_TO_YOUR_SECRET_TOKEN"
-
-# 限制 frps 只能分配以下端口用于代理隧道
-allowPorts = [
-  { start = 13389, end = 13389 },
-  { start = 13000, end = 13000 },
-]
-
-# webServer.port = 7500        # 仪表盘 (Railway 上不建议暴露，可在本地需要时启用)
-# webServer.user = "admin"
-# webServer.password = "CHANGE_ME"
 
 log.to = "console"
 log.level = "info"
